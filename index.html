@@ -36,7 +36,7 @@
 :root{
   /* Paleta neutra */
   --bg: #88A98C;
-  --bg-2:#efede0;
+  --bg-2:#F2EFED;
   --ink:#2b2b2b;
   --muted:#8d877f;
   --line:#d8d4cf;
@@ -47,6 +47,8 @@
   --img2: url('https://github.com/nellyaldana/Nelly-y-samuel/blob/main/flores5.jpg?raw=true');
   --ornamento: url('https://file.aiquickdraw.com/imgcompressed/img/compressed_9a7ec23d36126cd2ce32b8cd4b12b8da.webp');
   --foto1: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/foto1.PNG?raw=true');
+  --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
+   --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
 }
 
 *{box-sizing:border-box}
@@ -55,7 +57,7 @@ body{
   margin:0;
    font-family: 'Gwendolyn';
   color:var(--ink);
-  background:linear-gradient(#faf9f7, var(--bg));
+  background:linear-gradient(#faf9f7, #faf9f7);
   line-height:1.45;
   overflow-x:hidden;
 }
@@ -219,7 +221,7 @@ body{
 .hero-date{
   position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
   letter-spacing:.155em;
- font-family:'Gwendolyn'; font-size: clamp(18px, 8vw, 18px);
+ font-family:'Castoro Titling'; font-size: clamp(18px, 8vw, 18px);
   color: #856E41; opacity:0;
   animation:fadeIn 900ms ease forwards 1.3s;
     font-weight: 700;
@@ -236,13 +238,31 @@ body{
 .ornament-top{
   width:100%;
   height:80px; /* altura del adorno */
- background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativogrande.png?raw=true")
+ background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/anillo.png?raw=true")
               no-repeat center;
   background-size:contain;
   margin: 0 auto;
   opacity:0.8;
   
 }
+.ornament-abajo {
+  width: 100%;
+  height: 80px;
+  background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativogrande.png?raw=true")
+              no-repeat center;
+  background-size: contain;
+  opacity: 0.8;
+
+  position: absolute;
+  bottom: 40px; /* queda encima de la fecha */
+  left: 0;
+
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+
+
  .ornament-down{
   width:100%;
   height:80px; /* altura del adorno */
@@ -256,24 +276,38 @@ body{
 }
  .section{
   padding:184px 22px;
-  background-image:var(--img2);
+  background:#F2EFED;
   background-repeat: no-repeat;   /* no se repite */
   background-position: center;    /* centrada */
   background-size: cover;
    
 }
 
-.section.alt{ background:var(--bg-2); }
+.section.alt{padding:104px 22px;  background:var(--bg-2); }
 .section.alt1{background-image: var(--img1); }
 .section.foto1{ background:var(--foto1); }
 
    
-.container{ width:min(900px, 94vw); margin:auto; }
+.container{  background:var(--bg-2); width:min(900px, 94vw); margin:auto; }
   .secondtext {
   font-family:'Gwendolyn';
   width:min(900px, 94vw);
   margin:auto;
 }
+
+/* cambiar fuentes de "nos acompañas" */
+#confirmar {
+  font-family: 'Castoro Titling', serif;
+}
+#confirmar h2 {
+  font-family: 'Castoro Titling', serif;
+}
+
+#confirmar p,
+#confirmar .btn {
+  font-family: 'Yrsa', serif; /* o la fuente que quieras para párrafos y botones */
+}
+
 .memories
  {
   font-family:'Hi Melody'; font-size:10px; width:min(800px, 84vw); margin:auto;  
@@ -316,10 +350,26 @@ body{
 }
 .card{
   font-size:20px;
+  text-align: center;
   width: min(1300px, 85vw);
   background:#fff; border: hidden 15px floralwhite; border-radius:0px;
   padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
    
+}
+.card2{
+  font-size:20px;
+  width: min(1300px, 85vw);
+  background:#fff; border: hidden 15px floralwhite; border-radius:0px;
+  padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
+   
+}
+.card-img {
+  width: 100%;          /* ocupa todo el ancho de su contenedor */
+  max-width: 80px;     /* ancho máximo reducido */
+  height: auto;         /* mantiene proporción */
+  display: block;
+  margin: 0 auto 16px;  /* centrada y con espacio debajo */
+  border-radius: 8px;   /* opcional */
 }
 .details .card p:nth-of-type(1) {
   font-family: "Castoro Titling", serif;  font-size:13px;/* primera línea */
@@ -368,8 +418,8 @@ background-position: center;
   }
  
 .g {
-  border-radius:1px; padding-top:70%; position:relative; overflow:hidden;
-  background:#ddd; transform:scale(.98); opacity:0;
+  border-radius:1px; padding-top:100%; position:relative; overflow:hidden;
+  background:#F2EFED; transform:scale(.98); opacity:0;
 }
 .g::before{
   content:""; position:absolute; inset:0;
@@ -386,11 +436,29 @@ background-position: center;
   position: absolute;
   inset: 0;                      /* ocupa todo el contenedor */
   background-image: var(--foto1);
-  background-size: contain;      /* muestra la imagen entera */
+  background-size: relative;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
+.g.i2::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--foto2);
+  background-size: relative;      /* muestra la imagen entera */
   background-repeat: no-repeat;  /* sin repetir */
   background-position: center;   /* centrado */
 }
 
+.g.i3::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--foto3);
+  background-size: relative;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
 
 
 
@@ -460,7 +528,9 @@ img {
 
   <div class="hero-text">
     <div class="hero-names">Taylor y Travis</div>
+       <div class="ornament-abajo"></div>
     <div class="hero-date">25 · 10 · 25</div>
+ 
   </div>
 
   <i class="scroll-indicator" aria-hidden="true"></i>
@@ -484,44 +554,51 @@ img {
     </div>
   
 </section>
+
 <section class="section alt" id="galeria">
   <div class="memories reveal">
       <div class="g i1 reveal"></div>
     </div>
   
 </section>
-    
-<!-- DETALLES -->
-<section class="section" id="detalles">
-  <div class="container reveal">
-    <h2 class="h">Detalles del evento</h2>
-    <p class="sub">Comparte con nosotros este día tan especial. ¡Tu presencia es nuestro mejor regalo!</p>
 
+<!-- ubicaciones -->
+<section class="section alt" id="ubicaciones">
+    <h2 class="h">Lugar</h2>
     <div class="details">
+         <!-- ubicacion de la iglesia -->
       <article class="card reveal">
+          <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/iglesia1.png?raw=true" 
+       alt="Iglesia" class="card-img">
         <h3>Ceremonia</h3>
-        <p><strong>06:00 PM</strong> — Salon las palmas</p>
+        <p><strong>06:00 PM</strong> — Iglesia nuestro señor</p>
         <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
         <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
       </article>
-
-
-      <article class="card reveal reveal-delay-2">
-        <h3>Código de vestimenta</h3>
-        <p>Formal </p>
-        <p>Evita blanco puro — ¡es para la novia! ✨</p>
-      </article>
-     
-     <article class="card reveal reveal-delay-3">
-        <h3> No niños</h3>
-        <p> - </p>
-         <p>Nos encantaría que esta celebración la disfrutes tanto como nosotros, por eso hemos decidido que sea solo para adultos</p>
+      <!-- ubicacion del salon -->
+      <article class="card reveal">
+          <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/disco.png?raw=true" 
+       alt="Iglesia" class="card-img">
+        <h3>Recepción</h3>
+        <p><strong>07:00 PM</strong> — Salon las palmas</p>
+        <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
       </article>
     </div>
- </section>
+    </section>
+    
+  <!-- foto 3 -->  
+    <section class="section alt" id="galeria">
+  <div class="memories reveal">
+      <div class="g i2 reveal"></div>
+    </div>
+  
+</section>
+    
+
   
  <section class="section alt" id="cuenta">   
-<article class="card reveal reveal-delay-2">
+<article class="card2 reveal reveal-delay-2">
     <div class="timeline">
     <h2 class="h">Itinerario</h2>
       <div class="step reveal"><strong>06:00 pm</strong> — Recepción de invitados</div>
@@ -533,21 +610,41 @@ img {
   
 </section>
 
-<!-- GALERÍA -->
-<section class="section alt1" id="galeria">
-  <div class="memories reveal">♡</div>
-     <div class="gallery">
-      <div class="g i1 reveal"></div>
+<!-- Regalos -->
+<section class="section" id="detalles">
+  <div class="container reveal">
+    <h2 class="h">Sugerencia de regalo</h2>
+   <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/regalo.png?raw=true" 
+       alt="Iglesia" class="card-img">
+    <div class="details">
+      <article class="card reveal">
+        <h3>Sobre</h3>
+        <p><strong>BBVA</strong> — Cuenta de banco</p>
+        <p>1234567890</p>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
+      </article>
+</div>
     </div>
-  
+ </section>
+
+<!-- GALERÍA -->
+ <!-- foto 3 -->  
+    <section class="section alt" id="galeria">
+  <div class="memories reveal">
+      <div class="g i3 reveal"></div>
+    </div>
 </section>
 
-
+<!-- accion de confirmacion --> 
   
- <section id="confirmar" style="background:linear(180deg,#fff, #fff)">
+ <section class="container"  id="confirmar" style="background:linear(#F2EFED, #F2EFED)">
     <div class="container reveal" style="text-align:center">
       <h2>¿Nos acompañas?</h2>
-      <p class="sub reveal">Confirma tu asistencia antes del <strong>1 de octubre de 2025</strong>.</p>
+      <p class="sub reveal">Confirma tu asistencia antes del<br>
+      <strong>1 de octubre de 2025</strong>.</p>
+      
+     
+      
       <p>
         <a class="btn whatsapp" href="https://wa.me/526647629593?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
       </p>
@@ -594,5 +691,4 @@ tick(); setInterval(tick, 1000);
 </script>
 </body>
 </html>
-
 
