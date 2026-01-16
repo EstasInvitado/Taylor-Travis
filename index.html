@@ -359,6 +359,7 @@
             background: var(--bg-2);
             width: min(900px, 94vw);
             margin: auto;
+            
         }
 
         .secondtext {
@@ -445,10 +446,10 @@
         /* Detalles */
         .details {
             display: grid;
-            grid-template-columns: repeat(3, minmax(60px, 0.8fr));
-            gap: 5px;
-            width: min(800px, 95%);
-            margin: 8px auto 0;
+            grid-template-columns: repeat(2, 1fr));
+            gap: 0.01px;
+            width: min(1200px, 95%);
+            margin: 0px auto;
 
         }
 
@@ -461,6 +462,7 @@
             border-radius: 0px;
             padding: 24px;
             box-shadow: 0 20px 28px rgba(0, 0, 0, .05);
+            
 
         }
 
