@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
     <!-- Importa algunas fuentes de ejemplo de la categoría "Fancy" -->
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
@@ -323,7 +322,8 @@
             width: 100%;
             height: 80px;
             /* altura del adorno */
-            padding: 40px 20px 60px background: url("https://static.vecteezy.com/system/resources/previews/055/717/069/non_2x/elegant-gold-ornamental-divider-free-png.png") no-repeat center;
+            padding: 40px 20px 60px;
+            background: url("https://static.vecteezy.com/system/resources/previews/055/717/069/non_2x/elegant-gold-ornamental-divider-free-png.png") no-repeat center;
             background-size: contain;
             margin: 0 auto;
             opacity: 0.8;
@@ -625,7 +625,7 @@
             inset: 0;
             /* ocupa todo el contenedor */
             background-image: var(--foto1);
-            background-size: relative;
+            background-size: cover;
             /* muestra la imagen entera */
             background-repeat: no-repeat;
             /* sin repetir */
@@ -639,7 +639,7 @@
             inset: 0;
             /* ocupa todo el contenedor */
             background-image: var(--foto2);
-            background-size: relative;
+            background-size: cover;
             /* muestra la imagen entera */
             background-repeat: no-repeat;
             /* sin repetir */
@@ -653,7 +653,7 @@
             inset: 0;
             /* ocupa todo el contenedor */
             background-image: var(--foto3);
-            background-size: relative;
+            background-size: cover;
             /* muestra la imagen entera */
             background-repeat: no-repeat;
             /* sin repetir */
