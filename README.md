@@ -616,14 +616,15 @@ img {
 <section class="section" id="detalles">
   <div class="container reveal">
     <h2 class="h">Sugerencia de regalo</h2>
-   <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" 
-       alt="Iglesia" class="card-img">
+     
     <div class="details">
-      <article class="card reveal">
-        <h3>Sobre</h3>
+      <div class="card reveal">
+          <h2>Sobre</h2>
+              <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" 
+       alt="Iglesia" class="card-img">
         <p><strong>BBVA</strong> — Cuenta de banco</p>
         <p>1234567890</p>
-      </article>
+      </div>
 </div>
     </div>
  </section>
