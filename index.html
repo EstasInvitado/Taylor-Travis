@@ -455,7 +455,7 @@
         .card {
             font-size: 20px;
             text-align: center;
-            width: min(1300px, 85vw);
+            width: min(800px, 85vw);
             background: #fff;
             border: hidden 15px floralwhite;
             border-radius: 0px;
@@ -993,7 +993,7 @@
                 <p><strong>06:00 PM</strong> — Iglesia nuestro señor</p>
                 <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
                 <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
-            </article>
+            </article><br>
             <!-- ubicacion del salon -->
             <article class="card reveal">
                 <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/disco.png?raw=true" alt="Iglesia" class="card-img">
