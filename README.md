@@ -39,6 +39,7 @@
             /* Paleta neutra */
             --bg: #88A98C;
             --bg-2: #F2EFED;
+            --bg-3: #3B3232;
             --ink: #2b2b2b;
             --muted: #8d877f;
             --line: #d8d4cf;
@@ -367,15 +368,21 @@
             padding: 25px 22px;
             background: var(--bg-2);
         }
+        
          .details .section.alt p:nth-of-type(1) {
             font-family: "Castoro Titling", serif;
             font-size: 13px;
             /* primera línea */
         }
+        
 
 
         .section.alt1 {
             background-image: var(--img1);
+        }
+        .section.alt2 {
+            padding: 25px 22px;
+            background: var(--bg-3);
         }
 
         .section.foto1 {
@@ -561,6 +568,11 @@
             font-size: 13px;
             /* segunda línea */
         }
+         .details .card p:nth-of-type(3) {
+            font-family: "Yrsa", serif;
+            font-size: 13px;
+            /* segunda línea */
+        }
 
         .details .card a:nth-of-type(1) {
             font-family: "Yrsa", serif;
@@ -591,7 +603,7 @@
             /* segunda línea */
         }
 
-        .details .card2 a:nth-of-type(1) {
+        .details .card2 a:nth-of-type(3) {
             font-family: "Yrsa", serif;
             font-size: 13px;
             /* segunda línea */
@@ -847,7 +859,7 @@
     font-family: 'Ballet', cursive;
     font-size: 38px;          /* tamaño mediano */
     text-align: center;
-    color: #573A36;
+    color: #DED7D7;
     margin: 1em;          /* separación = 2 renglones aprox */
     line-height: 1.3;         /* buena separación entre líneas */
     max-width: 600px;
@@ -863,6 +875,8 @@
             height: 80px;
             object-fit: contain;
         }
+        #details p {
+            font-family: 'Luxurious Script', serif;
 
 
 
@@ -1084,7 +1098,7 @@
 
     </section>
 
-    <section class="section alt" id="galeria">
+    <section class="section alt2" id="galeria">
         <div class="memories reveal">
             <div class="title">
                 "El amor nos encontró… y decidimos no soltarnos" </div>
@@ -1192,11 +1206,12 @@
     <section class="section" id="regalo">
         <div class="ornament-top2"></div>
         <div class="container reveal">
-            <h2 class="h">Sugerencia de regalo</h2>
+            
 
             <div class="details">
                 <article class="card2 reveal">
-                    <h2>Lluvia de Sobres</h2>
+                    <h2 class="h">Sugerencia de regalo</h2>
+                    <p>Lluvia de Sobres</p>
                     <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" alt="Iglesia" class="card-img">
                     <p><strong>BBVA</strong> — Cuenta de banco</p>
                     <p>1234567890</p>
