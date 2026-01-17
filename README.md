@@ -1214,6 +1214,7 @@
                     <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" alt="Iglesia" class="card-img">
                     <p><strong>BBVA</strong> — Cuenta de banco</p>
                     <p>1234567890</p>
+                    <p2>NO NIÑOS</p2>
                 </article>
                 <div class="ornament-top3"></div>
             </div>
