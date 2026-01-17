@@ -603,7 +603,7 @@
             /* segunda línea */
         }
 
-        .details .card2 a:nth-of-type(3) {
+        .details .card2 a:nth-of-type(1) {
             font-family: "Yrsa", serif;
             font-size: 13px;
             /* segunda línea */
@@ -875,8 +875,7 @@
             height: 80px;
             object-fit: contain;
         }
-        #details p {
-            font-family: 'Luxurious Script', serif;
+        
 
 
 
