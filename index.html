@@ -39,7 +39,7 @@
             /* Paleta neutra */
             --bg: #88A98C;
             --bg-2: #F2EFED;
-            --bg-3: #3B3232;
+            --bg-3: #F5F2F0;
             --ink: #2b2b2b;
             --muted: #8d877f;
             --line: #d8d4cf;
@@ -859,7 +859,7 @@
     font-family: 'Ballet', cursive;
     font-size: 38px;          /* tamaño mediano */
     text-align: center;
-    color: #DED7D7;
+    color: #260F0F;
     margin: 1em;          /* separación = 2 renglones aprox */
     line-height: 1.3;         /* buena separación entre líneas */
     max-width: 600px;
