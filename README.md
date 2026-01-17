@@ -25,6 +25,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Hi-Melody&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
 
 
     <!-- Importar fuente Italianno desde Google Fonts -->
@@ -329,9 +331,29 @@
             opacity: 0.8;
 
         }
+          .ornament-top2 {
+            width: 100%;
+            height: 80px;
+            /* altura del adorno */
+            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativo1.png?raw=true") no-repeat center;
+            background-size: contain;
+            margin: 0 auto;
+            opacity: 0.8;
+
+        }
+        .ornament-top3 {
+            width: 100%;
+            height: 80px;
+            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativo1.png?raw=true") no-repeat center;
+            background-size: contain;
+            opacity: 0.8;
+             margin: 0 auto;
+            transform: rotate(180deg);
+           
+        }
 
         .section {
-            padding: 184px 22px;
+            padding: 124px 22px;
             background: #F2EFED;
             background-repeat: no-repeat;
             /* no se repite */
@@ -342,9 +364,15 @@
         }
 
         .section.alt {
-            padding: 104px 22px;
+            padding: 25px 22px;
             background: var(--bg-2);
         }
+         .details .section.alt p:nth-of-type(1) {
+            font-family: "Castoro Titling", serif;
+            font-size: 13px;
+            /* primera línea */
+        }
+
 
         .section.alt1 {
             background-image: var(--img1);
@@ -370,18 +398,21 @@
 
         /* cambiar fuentes de "nos acompañas" */
         #confirmar {
-            font-family: 'Castoro Titling', serif;
+            font-family: 'Luxurious Script', serif;
         }
 
         #confirmar h2 {
-            font-family: 'Castoro Titling', serif;
+            font-family: 'Yrsa', serif;
         }
 
-        #confirmar p,
+        #confirmar p {
+            font-family: 'Luxurious Script', serif;
+        }
         #confirmar .btn {
             font-family: 'Yrsa', serif;
             /* o la fuente que quieras para párrafos y botones */
         }
+        
 
         .memories {
             font-family: 'Hi Melody';
@@ -453,29 +484,57 @@
 
         }
 
-        .card {
-            font-size: 20px;
-            text-align: center;
-            width: min(800px, 85vw);
-            background: #fff;
-            border: hidden 15px floralwhite;
-            border-radius: 0px;
-            padding: 24px;
-            box-shadow: 0 20px 28px rgba(0, 0, 0, .05);
-            
+ .card {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    width: min(800px, 85vw);
+    background: #fff;
+    border: 1px solid #cbbfb2;
+    padding: 40px;
+    box-shadow: 0 20px 28px rgba(0, 0, 0, .06);
+}
 
-        }
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border: 1px solid #e6ddd3;
+    border-radius: 0px;
+    pointer-events: none;
+}
 
-        .card-2 {
-            font-size: 20px;
-            width: min(1300px, 85vw);
-            background: #fff;
-            border: hidden 15px floralwhite;
-            border-radius: 0px;
-            padding: 24px;
-            box-shadow: 0 20px 28px rgba(0, 0, 0, .05);
+.card2 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    width: min(800px, 85vw);
+    background: #fff;
+    border: 1px solid #d2c6b8;
+    border-radius: 14px;
+    padding: 36px;
+    box-shadow: 0 20px 28px rgba(0, 0, 0, .06);
+}
 
-        }
+.card2::before,
+.card2::after {
+    content: "✦";
+    position: absolute;
+    font-size: 18px;
+    color: #b08a6a;
+}
+
+.card2::before {
+    top: 12px;
+    left: 12px;
+}
+
+.card2::after {
+    bottom: 12px;
+    right: 12px;
+}
+
+       
 
         .card-img {
             width: 100%;
@@ -516,7 +575,36 @@
             font-weight: 600;
         }
 
-        .card p {
+        .card2 p {
+            margin: 6px 0;
+            color: #4d4a45;
+        }
+        .details .card2 p:nth-of-type(1) {
+            font-family: "Castoro Titling", serif;
+            font-size: 13px;
+            /* primera línea */
+        }
+
+        .details .card2 p:nth-of-type(2) {
+            font-family: "Yrsa", serif;
+            font-size: 13px;
+            /* segunda línea */
+        }
+
+        .details .card2 a:nth-of-type(1) {
+            font-family: "Yrsa", serif;
+            font-size: 13px;
+            /* segunda línea */
+        }
+
+
+        .card2 h3 {
+            font-family: 'Italianno';
+            margin: 0 0 8px;
+            font-weight: 600;
+        }
+
+        .card2 p {
             margin: 6px 0;
             color: #4d4a45;
         }
@@ -540,8 +628,8 @@
 
         .btn.whatsapp {
             font-family: 'Yrsa', cursive;
-            background: #eafff3;
-            border-color: #c1e8d2
+            background: #D9C9C5;
+            border-color: #997E77
         }
 
         /* Itinerario */
@@ -665,10 +753,12 @@
 
         .itinerary {
            max-width: 80px;
-            margin: 100px auto;
+            margin: 5px auto;
             position: relative;
             /* ⬅️ CLAVE */
-            font-family: 'Arial', sans-serif;
+            font-family: 'Monsieur La Doulaise', sans-serif;
+             font-size: 30px;
+            
         }
 
         /* Línea base */
@@ -706,9 +796,9 @@
             display: grid;
             grid-template-columns: 1fr var(--line-gap) 1fr;
             align-items: center;
-            margin: 10px -80%; /* con el primer numero manipulo la longitud de lo largo verticalmente hablando del itinerario (el largo de la ralla de en medio)con el segundo numero (%) este estoy moviendo la posicion del itinerario*/
+            margin: 10px -140%; /* con el primer numero manipulo la longitud de lo largo verticalmente hablando del itinerario (el largo de la ralla de en medio)con el segundo numero (%) este estoy moviendo la posicion del itinerario*/
             position: relative;
-            gap: 55px
+            gap: 105px
         }
 
 
@@ -716,7 +806,7 @@
         .event-content {
             min-width: 80px;
             font-family: 'Yrsa';
-            font-size: 10px;
+            font-size: 15px;
             text-align: right;
             color: var(--muted);
             padding: 40px 20px 60px;
@@ -731,6 +821,9 @@
         .event p {
             margin: 5px 0 0;
             color: #555;
+            font-family: 'Ballet';
+             font-size: 25px;
+             font-weight: bold;
         }
 
         /* Punto */
@@ -750,6 +843,20 @@
             background: #b07a5b;
         }
 
+#galeria .title {
+    font-family: 'Ballet', cursive;
+    font-size: 38px;          /* tamaño mediano */
+    text-align: center;
+    color: #573A36;
+    margin: 1em;          /* separación = 2 renglones aprox */
+    line-height: 1.3;         /* buena separación entre líneas */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    cursive;
+  font-weight: 400;
+  font-style: normal;
+}
         /* Icono */
         .icon {
             width: 80px;
@@ -939,7 +1046,7 @@
         <div class="hero-text">
             <div class="hero-names">Taylor y Travis</div>
             <div class="ornament-abajo"></div>
-            <div class="hero-date">25 · 10 · 25</div>
+            <div class="hero-date">15 · 11 · 26</div>
 
         </div>
 
@@ -952,7 +1059,7 @@
         <h2 class="h reveal-1">¡Falta muy poco!</h2>
         <p class="sub reveal">
             Acompáñanos a celebrar nuestro amor este<br>
-            <strong>25 de Octubre de 2025</strong>.
+            <strong>15 de Noviembre de 2026</strong>.
         </p>
 
 
@@ -979,10 +1086,13 @@
 
     <section class="section alt" id="galeria">
         <div class="memories reveal">
+            <div class="title">
+                "El amor nos encontró… y decidimos no soltarnos" </div>
             <div class="g i1 reveal"></div>
         </div>
 
     </section>
+   
 
     <!-- ubicaciones -->
     <section class="section alt" id="ubicaciones">
@@ -1027,7 +1137,7 @@
             <div class="event">
                 <div class="dot"></div>
                 <div class="event-content">
-                    <h3>12 am</h3>
+                    <h3>5 pm</h3>
                     <p>Ceremonia</p>
                 </div>
                 <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/iglesia.png?raw=true">
@@ -1038,7 +1148,7 @@
                 <div class="dot"></div>
                  <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/copas.png?raw=true">
                 <div class="event-content">
-                    <h3>1 PM</h3>
+                    <h3>7 pm</h3>
                     <p>Recepcion</p>
                 </div>
                
@@ -1048,7 +1158,7 @@
             <div class="event">
                 <div class="dot"></div>
                 <div class="event-content">
-                    <h3>2 PM</h3>
+                    <h3>8 pm</h3>
                     <p>Ramo</p>
                 </div>
                 <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/ramo.png?raw=true">
@@ -1059,7 +1169,7 @@
                 <div class="dot"></div>
                 <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/plato.png?raw=true">
                 <div class="event-content">
-                    <h3>5 PM</h3>
+                    <h3>9 pm</h3>
                     <p>Cena</p>
                 </div>
                 
@@ -1069,7 +1179,7 @@
             <div class="event end">
                 <div class="dot"></div>
                 <div class="event-content">
-                    <h3>8 PM</h3>
+                    <h3>10 pm</h3>
                     <p>Baile</p>
                 </div>
                 <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/vestido.png?raw=true">
@@ -1079,17 +1189,19 @@
     <!-- aqui acaba de itinerario -->
 
     <!-- Regalos -->
-    <section class="section" id="detalles">
+    <section class="section" id="regalo">
+        <div class="ornament-top2"></div>
         <div class="container reveal">
             <h2 class="h">Sugerencia de regalo</h2>
 
             <div class="details">
-                <div class="card reveal">
-                    <h2>Sobre</h2>
+                <article class="card2 reveal">
+                    <h2>Lluvia de Sobres</h2>
                     <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" alt="Iglesia" class="card-img">
                     <p><strong>BBVA</strong> — Cuenta de banco</p>
                     <p>1234567890</p>
-                </div>
+                </article>
+                <div class="ornament-top3"></div>
             </div>
         </div>
     </section>
@@ -1114,19 +1226,18 @@
 
 
             <p>
-                <a class="btn whatsapp" href="https://wa.me/526647629593?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
+                <a class="btn whatsapp" href="https://wa.me/526647629596?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
             </p>
-            <div class="ornament-down"></div>
         </div>
     </section>
 
     <footer>
-        Con amor ♡ <strong>Taylor & Travis</strong> — 25 · 10 · 25
+        Con amor  ♥  <strong>Taylor & Travis</strong> — 15 · 10 · 26
     </footer>
 
     <script>
         /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g');
+        const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
@@ -1140,7 +1251,7 @@
         revealEls.forEach(el => io.observe(el));
 
         /* --------- Cuenta regresiva --------- */
-        const target = new Date('2026-10-25T19:00:00');
+        const target = new Date('2026-11-15T19:00:00');
         const d = document.getElementById('d'),
             h = document.getElementById('h'),
             m = document.getElementById('m'),
