@@ -201,13 +201,16 @@ background-image: var(--img1);
   pointer-events:none;
 }
 .hero-names{
-  font-family: "ballet", cursive;
+     position: relative;
+  top: -180px;   /* sube */
+  
+  font-family: "Style Script", cursive;
   font-size: clamp(60px, 8vw, 1px);
   font-weight:80;
   letter-spacing: 4px;
   color:#ffffff;
-  text-shadow: 0 8px 18px rgba(0,0,0,.35);
-  transform:translateY(18px);
+  text-shadow: 2px .10px 3px rgba(0.35,0.35,0,.35);
+  transform: translateY(-30px);
   opacity:0;
   animation:fadeUp 1300ms ease forwards 1s;
 }
@@ -616,29 +619,28 @@ img {
 }
 #snow{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* no bloquea clics */
-  overflow: hidden;
+  inset: 0;
+  pointer-events: none;
   z-index: 9999;
 }
 
 .snowflake{
-  position: absolute;
-  top: -10px;
-  color: white;
-  font-size: 1em;
+  position: fixed;       /* ⬅️ CLAVE */
+  top: -20px;
+  left: 0;
+  color: #f2c94c;
   user-select: none;
-  animation: fall linear infinite;
+  animation-name: fall;
+  animation-timing-function: linear;
 }
+
 
 @keyframes fall{
   to{
     transform: translateY(110vh);
   }
 }
+
 
 </style>
 </head>
@@ -675,27 +677,26 @@ img {
 
 
 <script>
-const snowContainer = document.getElementById("snow");
+const snow = document.getElementById("snow");
 
-function createSnowflake(){
-  const snowflake = document.createElement("div");
-  snowflake.classList.add("snowflake");
-  snowflake.innerHTML = "⭐";
+function createStar(){
+  const star = document.createElement("div");
+  star.className = "snowflake";
+  star.textContent = "⭐";
 
-  snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-  snowflake.style.opacity = Math.random();
-  snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.fontSize = Math.random() * 10 + 12 + "px";
+  star.style.opacity = Math.random();
+  star.style.animationDuration = Math.random() * 5 + 6 + "s";
 
-  snowContainer.appendChild(snowflake);
+  snow.appendChild(star);
 
-  setTimeout(() => {
-    snowflake.remove();
-  }, 10000);
+  setTimeout(() => star.remove(), 12000);
 }
 
-setInterval(createSnowflake, 200);
+setInterval(createStar, 250);
 </script>
+
 
 
 
