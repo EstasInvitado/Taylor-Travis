@@ -1,1330 +1,772 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Metadatos Open Graph -->
-    <meta property="og:title" content="¡Estás invitado a nuestra boda ❤️! Taylor & Travis">
-    <meta property="og:description" content="¡Boda Taylor y Travis! Mira todos los detalles aquí.">
-    <meta property="og:image" content="https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true">
-    <meta property="og:url" content="https://EstasInvitado.github.io/Taylor-Travis/">
-
-    <title>Invitación de Boda — Taylor & Travis</title>
-
-    <!-- Carga de la fuente Ballet desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-    <!-- Importa algunas fuentes de ejemplo de la categoría "Fancy" -->
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Hi-Melody&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap" rel="stylesheet">
-
-
-    <!-- Importar fuente Italianno desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-
-    <!-- Puedes agregar más fuentes de Google Fonts si lo deseas -->
-
-    <style>
-        :root {
-            /* Paleta neutra */
-            --bg: #88A98C;
-            --bg-2: #F2EFED;
-            --bg-3: #F5F2F0;
-            --ink: #2b2b2b;
-            --muted: #8d877f;
-            --line: #d8d4cf;
-
-            /* Imágenes: cámbialas por las tuyas */
-            --hero: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true');
-            --img1: url('https://raw.githubusercontent.com/nellyaldana/Nelly-y-samuel/refs/heads/main/img13.png');
-            --img2: url('https://github.com/nellyaldana/Nelly-y-samuel/blob/main/flores5.jpg?raw=true');
-            --ornamento: url('https://file.aiquickdraw.com/imgcompressed/img/compressed_9a7ec23d36126cd2ce32b8cd4b12b8da.webp');
-            --foto1: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/foto1.PNG?raw=true');
-            --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
-            --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
-
-            --line-gap: 80px;
-            /*linea imaginaria util para acomodar el itinerario, espacio total alrededor de la línea */
-
-
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        html,
-        body {
-            height: 100%
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Gwendolyn';
-            color: var(--ink);
-            background: linear-gradient(#faf9f7, #faf9f7);
-            line-height: 1.45;
-            overflow-x: hidden;
-        }
-
-        /* ---------- Portada 3 franjas (idéntica al ejemplo) ---------- */
-        .hero {
-            position: relative;
-            min-height: 100svh;
-            display: grid;
-            place-items: center;
-            padding: 64px 18px 24px;
-            background: linear-gradient(to bottom, #F5ECE6, #F2EFED);
-
-        }
-
-        .monogram {
-            position: absolute;
-            display: inline-block;
-            top: 8px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: max-content;
-            font-size: 38px;
-            letter-spacing: 2px;
-            color: var(--ink);
-            opacity: 0;
-            text-align: center;
-            animation: fadeIn 900ms ease forwards 300ms;
-        }
-
-        /* Save & Date */
-        .monogram .ital {
-            font-family: 'Italianno', cursive;
-            font-weight: 500;
-            letter-spacing: 5px;
-        }
-
-        /* the */
-        .monogram .gwen {
-            font-family: 'Gwendolyn', cursive;
-            font-size: 0.9em;
-            /* un poquito más discreta */
-            margin: 0px;
-            letter-spacing: 5px;
-        }
-
-
-
-
-        /* Líneas decorativas */
-        .monogram::before,
-        .monogram::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 40%;
-            /* ajusta el largo de las líneas */
-            height: 1px;
-            /* grosor de la línea */
-            background-color: var(--ink);
-            /* mismo color que el texto */
-        }
-
-        .monogram::before {
-            left: -45%;
-            /* separa la línea a la izquierda del texto */
-        }
-
-        .monogram::after {
-            right: -45%;
-            /* separa la línea a la derecha del texto */
-        }
-
-
-        .strips {
-            width: min(980px, 85vw);
-            display: grid;
-            grid-template-columns: 0.6fr 0.9fr 0.6fr;
-            /* centro más ancho */
-            gap: min(3vw, 16px);
-            align-items: center;
-            /* centramos verticalmente dentro de la fila */
-        }
-
-        .strip {
-            position: relative;
-            border-radius: 3px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-            isolation: isolate;
-            height: min(68svh, 640px);
-            /* altura base */
-            transform: translateY(40px);
-            opacity: 0;
-        }
-
-        /* Ajustamos laterales */
-        .strip.s-left,
-        .strip.s-right {
-            height: calc(min(50svh, 500px));
-            /* acomodar los extremos de la portada */
-        }
-
-        /* Esto centra las columnas laterales respecto a la central */
-        .strip.s-left,
-        .strip.s-right {
-            margin-top: 2px;
-        }
-
-        .strip::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: var(--hero);
-            background-size: cover;
-            background-position: center;
-            filter: contrast(1) saturate(1.05);
-            transform: scale(1.1);
-        }
-
-        .strip.s-left::before {
-            background-position: left;
-        }
-
-        .strip.s-center::before {
-            background-position: center;
-        }
-
-        .strip.s-right::before {
-            background-position: right;
-        }
-
-        /* Animaciones independientes para cada franja */
-        .strip.s-left {
-            animation: slideInLeft 1000ms cubic-bezier(.2, .7, .2, 1) forwards 300ms;
-        }
-
-        .strip.s-center {
-            animation: revealUp 1200ms cubic-bezier(.2, .1, .2, 1) forwards 720ms;
-        }
-
-        .strip.s-right {
-            animation: slideInRight 900ms cubic-bezier(.2, .7, .2, 1) forwards 540ms;
-        }
-
-        /* Brillo sutil en loop */
-        .strip::after {
-            content: "";
-            position: absolute;
-            inset: -20%;
-            background: radial-gradient(30% 30% at 20% 10%, rgba(255, 255, 255, .18), transparent 60%);
-            transform: translateX(-40%) rotate(8deg);
-            opacity: 0;
-            animation: shimmer 6s ease-in-out infinite 2.4s;
-            pointer-events: none;
-        }
-
-        /* Títulos sobre la foto (estilo script cruzando) */
-        .hero-text {
-            position: absolute;
-            inset: 0;
-            display: grid;
-            place-items: center;
-            pointer-events: none;
-        }
-
-        .hero-names {
-            font-family: "ballet", cursive;
-            font-size: clamp(60px, 8vw, 1px);
-            font-weight: 80;
-            letter-spacing: 4px;
-            color: #ffffff;
-            text-shadow: 0 8px 18px rgba(0, 0, 0, .35);
-            transform: translateY(18px);
-            opacity: 0;
-            animation: fadeUp 1300ms ease forwards 2s;
-        }
-
-        .hero-y {
-            font-family: "Fleur De Leah", cursive;
-            font-size: clamp(48px, 9vw, 96px);
-            font-weight: 800;
-            letter-spacing: .5px;
-            color: #ffffff;
-            text-shadow: 0 8px 18px rgba(0, 0, 0, .35);
-            transform: translateY(18px);
-            opacity: 0;
-            animation: fadeUp 900ms ease forwards 1s;
-        }
-
-        .hero-date {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            letter-spacing: .155em;
-            font-family: 'Castoro Titling';
-            font-size: clamp(18px, 8vw, 18px);
-            color: #856E41;
-            opacity: 0;
-            animation: fadeIn 900ms ease forwards 1.3s;
-            font-weight: 700;
-        }
-
-        /* Flecha scroll */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            width: 26px;
-            height: 26px;
-            border-bottom: 2px solid #111;
-            border-right: 2px solid #111;
-            transform: translate(-50%, 0) rotate(45deg);
-            opacity: .2;
-            animation: bounce 2.6s infinite;
-        }
-
-        .ornament-top {
-            width: 100%;
-            height: 80px;
-            /* altura del adorno */
-            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/anillo.png?raw=true") no-repeat center;
-            background-size: contain;
-            margin: 0 auto;
-            opacity: 0.8;
-
-        }
-
-        .ornament-abajo {
-            width: 100%;
-            height: 80px;
-            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativogrande.png?raw=true") no-repeat center;
-            background-size: contain;
-            opacity: 0.8;
-
-            position: absolute;
-            bottom: 40px;
-            /* queda encima de la fecha */
-            left: 0;
-
-            transform: rotate(180deg);
-            pointer-events: none;
-        }
-
-
-
-        .ornament-down {
-            width: 100%;
-            height: 80px;
-            /* altura del adorno */
-            padding: 40px 20px 60px;
-            background: url("https://static.vecteezy.com/system/resources/previews/055/717/069/non_2x/elegant-gold-ornamental-divider-free-png.png") no-repeat center;
-            background-size: contain;
-            margin: 0 auto;
-            opacity: 0.8;
-
-        }
-          .ornament-top2 {
-            width: 100%;
-            height: 80px;
-            /* altura del adorno */
-            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativo1.png?raw=true") no-repeat center;
-            background-size: contain;
-            margin: 0 auto;
-            opacity: 0.8;
-
-        }
-        .ornament-top3 {
-            width: 100%;
-            height: 80px;
-            background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativo1.png?raw=true") no-repeat center;
-            background-size: contain;
-            opacity: 0.8;
-             margin: 0 auto;
-            transform: rotate(180deg);
-           
-        }
-
-        .section {
-            padding: 124px 22px;
-            background: #F2EFED;
-            background-repeat: no-repeat;
-            /* no se repite */
-            background-position: center;
-            /* centrada */
-            background-size: cover;
-
-        }
-
-        .section.alt {
-            padding: 25px 22px;
-            background: var(--bg-2);
-        }
-        
-         .details .section.alt p:nth-of-type(1) {
-            font-family: "Castoro Titling", serif;
-            font-size: 13px;
-            /* primera línea */
-        }
-        
-
-
-        .section.alt1 {
-            background-image: var(--img1);
-        }
-        .section.alt2 {
-            padding: 25px 22px;
-            background: var(--bg-3);
-        }
-
-        .section.foto1 {
-            background: var(--foto1);
-        }
-
-
-        .container {
-            background: var(--bg-2);
-            width: min(900px, 94vw);
-            margin: auto;
-            
-        }
-
-        .secondtext {
-            font-family: 'Gwendolyn';
-            width: min(900px, 94vw);
-            margin: auto;
-        }
-
-        /* cambiar fuentes de "nos acompañas" */
-        #confirmar {
-            font-family: 'Luxurious Script', serif;
-        }
-
-        #confirmar h2 {
-            font-family: 'Yrsa', serif;
-        }
-
-        #confirmar p {
-            font-family: 'Luxurious Script', serif;
-        }
-        #confirmar .btn {
-            font-family: 'Yrsa', serif;
-            /* o la fuente que quieras para párrafos y botones */
-        }
-        
-
-        .memories {
-            font-family: 'Hi Melody';
-            font-size: 10px;
-            width: min(800px, 84vw);
-            margin: auto;
-        }
-
-        .h {
-            font-weight: 600;
-            font-size: clamp(38px, 4.3vw, 50px);
-            text-align: center;
-            margin: 0 0 16px;
-
-        }
-
-        .sub {
-            text-align: center;
-            color: var(--muted);
-            font-family: 'Italianno';
-            font-size: clamp(28px, 5.3vw, 38px);
-            margin: 0 auto 36px;
-            max-width: 720px;
-        }
-
-        /*ade aqui hasta donde dice cuenta regresiva estoy intentando poner la galeria de fotos si no funciona quitar esta parte */
-
-
-        /* Cuenta regresiva */
-        .countdown {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(60px, 0.8fr));
-            gap: 6px;
-            width: min(350px, 80%);
-            margin: 8px auto 0;
-        }
-
-        .tile {
-            background: #fff;
-            border: none 10px whitesmoke;
-            border-radius: 100px;
-            padding: 1px 1px;
-            text-align: center;
-            box-shadow: 10px 10px 10px rgba(0, 1, 0, 0.4);
-            transform: translateY(12px);
-            opacity: 0;
-        }
-
-        .tile .num {
-            font-family: 'Castoro Titling';
-            font-size: clamp(28px, 4.5vw, 18px);
-            font-weight: 300;
-        }
-
-        .tile .lbl {
-            font-family: 'Castoro Titling';
-            color: var(--muted);
-            font-size: 8px;
-            letter-spacing: .08em;
-        }
-
-        /* Detalles */
-        .details {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr));
-            gap: 0.01px;
-            width: min(1200px, 95%);
-            margin: 0px auto;
-
-        }
-
- .card {
-    position: relative;
-    font-size: 20px;
-    text-align: center;
-    width: min(800px, 85vw);
-    background: #fff;
-    border: 1px solid #cbbfb2;
-    padding: 40px;
-    box-shadow: 0 20px 28px rgba(0, 0, 0, .06);
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+ <!-- Metadatos Open Graph -->
+<meta property="og:title" content="¡Bebe en camino! 🤰">
+<meta property="og:description" content="¡Bienvenido!">
+<meta property="og:image" content="https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true">
+<meta property="og:url" content="https://EstasInvitado.github.io/BabyOnWay/">
+
+<title>Bebe en camino...</title>
+
+<!-- Carga de la fuente Ballet desde Google Fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+  <!-- Importa algunas fuentes de ejemplo de la categoría "Fancy" -->
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yrsa&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Hi-Melody&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+ 
+ 
+<!-- Importar fuente Italianno desde Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
+  <!-- Puedes agregar más fuentes de Google Fonts si lo deseas -->
+
+<style>
+:root{
+  /* Paleta neutra */
+  --bg: #88398C;
+  --bg-2:url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --ink:#2b2b2b;
+  --muted:#8d877f;
+  --line:#d8d4cf;
+
+  /* Imágenes: cámbialas por las tuyas */
+  --hero: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --img1: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/fondoestrellas.png?raw=true');
+  --img2: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --ornamento: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true'); 
+  --foto1: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
+   --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
+
+  --line-gap: 80px;   /*linea imaginaria util para acomodar el itinerario, espacio total alrededor de la línea */
+
+    
 }
 
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 10px;
-    border: 1px solid #e6ddd3;
-    border-radius: 0px;
-    pointer-events: none;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+   font-family: 'Gwendolyn';
+  color:var(--ink);
+  background:linear-gradient(#faf9f7, #faf9f7);
+  line-height:1.45;
+  overflow-x:hidden;
 }
 
-.card2 {
-    position: relative;
-    font-size: 20px;
-    text-align: center;
-    width: min(800px, 85vw);
-    background: #fff;
-    border: 1px solid #d2c6b8;
-    border-radius: 14px;
-    padding: 36px;
-    box-shadow: 0 20px 28px rgba(0, 0, 0, .06);
+/* ---------- Portada 3 franjas (idéntica al ejemplo) ---------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:64px 18px 24px;
+background-image: var(--img1);
+
 }
 
-.card2::before,
-.card2::after {
-    content: "✦";
-    position: absolute;
-    font-size: 18px;
-    color: #b08a6a;
+.monogram {
+  position: absolute;
+  display: inline-block;
+  top: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: max-content;
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: var(--ink);
+  opacity: 0;
+  text-align: center;
+  animation: fadeIn 900ms ease forwards 300ms;
 }
 
-.card2::before {
-    top: 12px;
-    left: 12px;
+/* Save & Date */
+.monogram .ital {
+  font-family: 'Italianno', cursive;
+  font-weight: 500;
+     letter-spacing: 5px;
 }
 
-.card2::after {
-    bottom: 12px;
-    right: 12px;
+/* the */
+.monogram .gwen {
+  font-family: 'Gwendolyn', cursive;
+  font-size: 0.5em;      /* un poquito más discreta */
+  margin: 0px;
+   letter-spacing: 2px;
 }
 
-       
-
-        .card-img {
-            width: 100%;
-            /* ocupa todo el ancho de su contenedor */
-            max-width: 80px;
-            /* ancho máximo reducido */
-            height: auto;
-            /* mantiene proporción */
-            display: block;
-            margin: 0 auto 16px;
-            /* centrada y con espacio debajo */
-            border-radius: 8px;
-            /* opcional */
-        }
-
-        .details .card p:nth-of-type(1) {
-            font-family: "Castoro Titling", serif;
-            font-size: 13px;
-            /* primera línea */
-        }
-
-        .details .card p:nth-of-type(2) {
-            font-family: "Yrsa", serif;
-            font-size: 13px;
-            /* segunda línea */
-        }
-         .details .card p:nth-of-type(3) {
-            font-family: "Yrsa", serif;
-            font-size: 13px;
-            /* segunda línea */
-        }
-
-        .details .card a:nth-of-type(1) {
-            font-family: "Yrsa", serif;
-            font-size: 13px;
-            /* segunda línea */
-        }
-
-
-        .card h3 {
-            font-family: 'Italianno';
-            margin: 0 0 8px;
-            font-weight: 600;
-        }
-
-        .card2 p {
-            margin: 6px 0;
-            color: #4d4a45;
-        }
-        .details .card2 p:nth-of-type(1) {
-            font-family: "Castoro Titling", serif;
-            font-size: 13px;
-            /* primera línea */
-        }
-
-        .details .card2 p:nth-of-type(2) {
-            font-family: "Yrsa", serif;
-            font-size: 13px;
-            /* segunda línea */
-        }
-
-        .details .card2 a:nth-of-type(1) {
-            font-family: "Yrsa", serif;
-            font-size: 13px;
-            /* segunda línea */
-        }
-
-
-        .card2 h3 {
-            font-family: 'Italianno';
-            margin: 0 0 8px;
-            font-weight: 600;
-        }
-
-        .card2 p {
-            margin: 6px 0;
-            color: #4d4a45;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 18px;
-            border-radius: 999px;
-            border: 1px solid #cfc9c2;
-            text-decoration: none;
-            color: #2b2b2b;
-            background: linear-gradient(#fff, #f6f4f1);
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 18px rgba(0, 0, 0, .06);
-        }
-
-        .btn.whatsapp {
-            font-family: 'Yrsa', cursive;
-            background: #D9C9C5;
-            border-color: #997E77
-        }
-
-        /* Itinerario */
-        .timeline {
-            border-left: 2px solid var(--line);
-            margin: 8px auto 0;
-            max-width: 680px;
-            padding-left: 30px;
-        }
-
-        .step {
-            font-family: 'Baskerville';
-            font-size: 15px;
-            position: relative;
-            margin: 18px 0;
-            transform: translateY(20px);
-            opacity: 0;
-        }
-
-        .step::before {
-            content: "";
-            position: absolute;
-            left: -20px;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            background: #fff;
-            border: 2px solid #cbbfb2;
-            border-radius: 50%;
-        }
-
-        /* Galería */
-        .gallery {
-            margin-top: 10px;
-            width: 400px;
-            height: 400px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-
-
-        }
-
-        .photos {
-            font-weight: 800;
-            font-size: clamp(208px, 4.3vw, 50px);
-            text-align: center;
-            margin: 500px;
-            font-family: 'Fleur de Leah', cursive;
-
-        }
-
-        .g {
-            border-radius: 1px;
-            padding-top: 100%;
-            position: relative;
-            overflow: hidden;
-            background: #F2EFED;
-            transform: scale(.98);
-            opacity: 0;
-        }
-
-        .g::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            transition: transform .6s ease;
-        }
-
-        /*este es para que se abra la fotito del cuadrito que esta en el centro img1*/
-
-        .g:hover::before {
-            transform: scale(1.16);
-        }
-
-        /*este numero de scale sirve para el zoom en la foto*/
-        .g.i1::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            /* ocupa todo el contenedor */
-            background-image: var(--foto1);
-            background-size: cover;
-            /* muestra la imagen entera */
-            background-repeat: no-repeat;
-            /* sin repetir */
-            background-position: center;
-            /* centrado */
-        }
-
-        .g.i2::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            /* ocupa todo el contenedor */
-            background-image: var(--foto2);
-            background-size: cover;
-            /* muestra la imagen entera */
-            background-repeat: no-repeat;
-            /* sin repetir */
-            background-position: center;
-            /* centrado */
-        }
-
-        .g.i3::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            /* ocupa todo el contenedor */
-            background-image: var(--foto3);
-            background-size: cover;
-            /* muestra la imagen entera */
-            background-repeat: no-repeat;
-            /* sin repetir */
-            background-position: center;
-            /* centrado */
-        }
-
-        .itinerary {
-           max-width: 80px;
-            margin: 5px auto;
-            position: relative;
-            /* ⬅️ CLAVE */
-            font-family: 'Monsieur La Doulaise', sans-serif;
-             font-size: 30px;
-            
-        }
-
-        /* Línea base */
-        /* Línea base (gris) */
-        .line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            /* ⬅️ ya NO es 100% */
-            background: #ddd;
-            transform: translateX(-50%);
-        }
-
-       
-
-        /* Línea activa (coloreada) */
-        .line-progress {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 4px;
-            height: 0;
-            /* controlada por JS */
-            background: #b07a5b;
-            transform: translateX(-50%);
-            transition: height 0.2s ease-out;
-            grid-column: 2;
-            justify-self: center;
-        }
-
-
-        .event {
-            display: grid;
-            grid-template-columns: 1fr var(--line-gap) 1fr;
-            align-items: center;
-            margin: 10px -140%; /* con el primer numero manipulo la longitud de lo largo verticalmente hablando del itinerario (el largo de la ralla de en medio)con el segundo numero (%) este estoy moviendo la posicion del itinerario*/
-            position: relative;
-            gap: 105px
-        }
 
 
 
-        .event-content {
-            min-width: 80px;
-            font-family: 'Yrsa';
-            font-size: 15px;
-            text-align: right;
-            color: var(--muted);
-            padding: 40px 20px 60px;
-
-        }
-
-        .event h3 {
-            margin: 0;
-            color: #b07a5b;
-        }
-
-        .event p {
-            margin: 5px 0 0;
-            color: #555;
-            font-family: 'Ballet';
-             font-size: 25px;
-             font-weight: bold;
-        }
-
-        /* Punto */
-        .dot {
-            position: absolute;
-            left: 50%;
-            width: 18px;
-            height: 18px;
-            background: #ddd;
-            border-radius: 50%;
-            transform: translate(-50%, 0);
-            z-index: 2;
-            transition: background 0.3s;
-        }
-
-        .event.active .dot {
-            background: #b07a5b;
-        }
-
-#galeria .title {
-    font-family: 'Ballet', cursive;
-    font-size: 38px;          /* tamaño mediano */
-    text-align: center;
-    color: #260F0F;
-    margin: 1em;          /* separación = 2 renglones aprox */
-    line-height: 1.3;         /* buena separación entre líneas */
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    cursive;
-  font-weight: 400;
-  font-style: normal;
+/* Líneas decorativas */
+.monogram::before,
+.monogram::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;       /* ajusta el largo de las líneas */
+  height: 1px;      /* grosor de la línea */
+  background-color: var(--ink);  /* mismo color que el texto */
 }
-        /* Icono */
-        .icon {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-        }
-        
+
+.monogram::before {
+  left: -45%;       /* separa la línea a la izquierda del texto */
+}
+
+.monogram::after {
+  right: -45%;      /* separa la línea a la derecha del texto */
+}
+
+
+.strips {
+  width: min(980px, 85vw);
+  display: grid;
+  
+  gap: min(3vw, 16px);
+  align-items: center; /* centramos verticalmente dentro de la fila */
+}
+
+.strip {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  isolation: isolate;
+  height: min(68svh, 640px); /* altura base */
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+/* Ajustamos laterales */
+.strip.s-left,
+.strip.s-right {
+  height: calc(min(50svh, 500px)); /* acomodar los extremos de la portada */
+}
+
+/* Esto centra las columnas laterales respecto a la central */
+.strip.s-left,
+.strip.s-right {
+  margin-top: 2px;
+}
+
+.strip::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center;
+  filter: contrast(1) saturate(1.05);
+  transform: scale(1.1);
+}
+
+.strip.s-left::before { background-position: left; }
+.strip.s-center::before { background-position: center; }
+.strip.s-right::before { background-position: right; }
+
+/* Animaciones independientes para cada franja */
+.strip.s-left{ animation:slideInLeft 1000ms cubic-bezier(.2,.7,.2,1) forwards 300ms; }
+.strip.s-center{ animation:revealUp 1200ms cubic-bezier(.2,.1,.2,1) forwards 720ms; }
+.strip.s-right{ animation:slideInRight 900ms cubic-bezier(.2,.7,.2,1) forwards 540ms; }
+
+/* Brillo sutil en loop */
+.strip::after{
+  content:"";
+  position:absolute; inset:-20%;
+  background: radial-gradient(30% 30% at 20% 10%, rgba(255,255,255,.18), transparent 60%);
+  transform: translateX(-40%) rotate(8deg);
+  opacity:0;
+  animation: shimmer 6s ease-in-out infinite 2.4s;
+  pointer-events:none;
+}
+
+/* Títulos sobre la foto (estilo script cruzando) */
+.hero-text{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  pointer-events:none;
+}
+.hero-names{
+  font-family: "ballet", cursive;
+  font-size: clamp(60px, 8vw, 1px);
+  font-weight:80;
+  letter-spacing: 4px;
+  color:#ffffff;
+  text-shadow: 0 8px 18px rgba(0,0,0,.35);
+  transform:translateY(18px);
+  opacity:0;
+  animation:fadeUp 1300ms ease forwards 1s;
+}
+.hero-y{
+  font-family: "Fleur De Leah", cursive;
+  font-size: clamp(48px, 9vw, 96px);
+  font-weight:800;
+  letter-spacing:.5px;
+  color:#ffffff;
+  text-shadow: 0 8px 18px rgba(0,0,0,.35);
+  transform:translateY(18px);
+  opacity:0;
+  animation:fadeUp 900ms ease forwards 1s;
+}
+.hero-date{
+  position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+  letter-spacing:.155em;
+ font-family:'Castoro Titling'; font-size: clamp(18px, 8vw, 18px);
+  color: #856E41; opacity:0;
+  animation:fadeIn 900ms ease forwards 1.3s;
+    font-weight: 700;
+}
+
+/* Flecha scroll */
+.scroll-indicator{
+  position:absolute; bottom:0px; left:50%; 
+  width:26px; height:26px; border-bottom:2px solid #111; border-right:2px solid #111;
+  transform: translate(-50%,0) rotate(45deg);
+  opacity:.2; animation:bounce 2.6s infinite;
+}
+  
+.ornament-top{
+  width:100%;
+  height:80px; /* altura del adorno */
+ background: url("https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true")
+              no-repeat center;
+  background-size:contain;
+  margin: 0 auto;
+  opacity:0.8;
+  
+}
+.ornament-abajo {
+  width: 100%;
+  height: 80px;
+  background: url("https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true")
+              no-repeat center;
+  background-size: contain;
+  opacity: 0.8;
+
+  position: absolute;
+  bottom: 40px; /* queda encima de la fecha */
+  left: 0;
+
+  
+  pointer-events: none;
+}
 
 
 
-        /* Footer */
-        footer {
-            font-family: 'Yrsa';
-            font-size: 10px;
-            text-align: center;
-            color: var(--muted);
-            padding: 40px 20px 60px;
-        }
-
-        /* ---------- Animaciones base + apariciones al hacer scroll ---------- */
-        @keyframes fadeIn {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(18px)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-40px)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(40px)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes revealUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px) scale(.98)
-            }
-
-            to {
-                opacity: 1;
-                transform: none
-            }
-        }
-
-        @keyframes shimmer {
-
-            0%,
-            100% {
-                opacity: 0;
-                transform: translateX(-40%) rotate(8deg)
-            }
-
-            50% {
-                opacity: .35;
-                transform: translateX(40%) rotate(8deg)
-            }
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translate(-50%, 0) rotate(45deg);
-            }
-
-            50% {
-                transform: translate(-50%, 6px) rotate(45deg);
-            }
-        }
-
-        /* estado "visible" al scrollear */
-        .reveal.in {
-            animation: fadeUp 800ms ease forwards;
-        }
-
-        .reveal-delay-1.in {
-            animation-delay: 80ms;
-        }
-
-        .reveal-delay-2.in {
-            animation-delay: 160ms;
-        }
-
-        .reveal-delay-3.in {
-            animation-delay: 240ms;
-        }
-
-        .reveal-1.in {
-            animation: slideInLeft 800ms ease forwards;
-        }
-
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .details {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-            @media (max-width: 640px) {
-                .strips {
-                    grid-template-columns: 1fr 1.2fr 1fr;
-                    gap: 10px;
-                }
-
-                .strip {
-                    height: 58svh;
-                }
-
-                .countdown {
-                    grid-template-columns: repeat(2, 1fr);
-                }
-
-                .timeline {
-                    padding-left: 14px;
-                }
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                * {
-                    animation: none !important;
-                    transition: none !important
-                }
-            }
-
-
-            /* Aquí pones la regla */
-            img {
-                border-radius: 0 !important;
-            }
-    </style>
-</head>
-
-<body>
-
-    <!-- PORTADA: 3 franjas con animaciones independientes -->
-    <header class="hero" id="inicio">
-        <div class="monogram">
-            <span class="ital">save</span>
-            <span class="gwen">The</span>
-            <span class="ital">date</span>
-        </div>
-
-
-        <div class="strips" aria-label="Foto portada en tres franjas">
-            <div class="strip s-left"></div>
-            <div class="strip s-center"></div>
-            <div class="strip s-right"></div>
-        </div>
-
-        <div class="hero-text">
-            <div class="hero-names">Taylor y Travis</div>
-            <div class="ornament-abajo"></div>
-            <div class="hero-date">15 · 11 · 26</div>
-
-        </div>
-
-        <i class="scroll-indicator" aria-hidden="true"></i>
-    </header>
-
-    <!-- CUENTA REGRESIVA -->
-    <section class="section alt" id="cuenta">
-        <div class="ornament-top"></div>
-        <h2 class="h reveal-1">¡Falta muy poco!</h2>
-        <p class="sub reveal">
-            Acompáñanos a celebrar nuestro amor este<br>
-            <strong>15 de Noviembre de 2026</strong>.
-        </p>
-
-
-        <div class="countdown">
-            <div class="tile reveal">
-                <div class="num" id="d">00</div>
-                <div class="lbl">Días</div>
-            </div>
-            <div class="tile reveal reveal-delay-1">
-                <div class="num" id="h">00</div>
-                <div class="lbl">Horas</div>
-            </div>
-            <div class="tile reveal reveal-delay-2">
-                <div class="num" id="m">00</div>
-                <div class="lbl">Minutos</div>
-            </div>
-            <div class="tile reveal reveal-delay-3">
-                <div class="num" id="s">00</div>
-                <div class="lbl">Segundos</div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="section alt2" id="galeria">
-        <div class="memories reveal">
-            <div class="title">
-                "El amor nos encontró… y decidimos no soltarnos" </div>
-            <div class="g i1 reveal"></div>
-        </div>
-
-    </section>
+ .ornament-down{
+  width:100%;
+  height:80px; /* altura del adorno */
+  padding:40px 20px 60px
+ background: url("https://static.vecteezy.com/system/resources/previews/055/717/069/non_2x/elegant-gold-ornamental-divider-free-png.png")
+              no-repeat center;
+  background-size:contain;
+  margin: 0 auto;
+  opacity:0.8;
+  
+}
+ .section{
+  padding:184px 22px;
+  background-image: var(--img1);
+  background-repeat: no-repeat;   /* no se repite */
+  background-position: center;    /* centrada */
+  background-size: cover;
    
+}
 
-    <!-- ubicaciones -->
-    <section class="section alt" id="ubicaciones">
-        <h2 class="h">Lugar</h2>
-        <div class="details">
-            <!-- ubicacion de la iglesia -->
-            <article class="card reveal">
-                <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/iglesia1.png?raw=true" alt="Iglesia" class="card-img">
-                <h3>Ceremonia</h3>
-                <p><strong>06:00 PM</strong> — Iglesia nuestro señor</p>
-                <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
-            </article><br>
-            <!-- ubicacion del salon -->
-            <article class="card reveal">
-                <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/disco.png?raw=true" alt="Iglesia" class="card-img">
-                <h3>Recepción</h3>
-                <p><strong>07:00 PM</strong> — Salon las palmas</p>
-                <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
-                <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
-            </article>
-        </div>
-    </section>
+.section.alt{padding:104px 22px; }
 
-    <!-- foto 3 -->
-    <section class="section alt" id="galeria">
-        <div class="memories reveal">
-            <div class="g i2 reveal"></div>
-        </div>
+.section.foto1{ background:var(--foto1); }
 
-    </section>
+   
+.container{  background:var(--bg-2); width:min(900px, 94vw); margin:auto; }
+  .secondtext {
+  font-family:'Gwendolyn';
+  width:min(900px, 94vw);
+  margin:auto;
+}
 
+/* cambiar fuentes de "nos acompañas" */
+#confirmar {
+  font-family: 'Castoro Titling', serif; 
+}
+#confirmar h2 {
+  font-family: 'Castoro Titling', serif;
+}
 
-    <!-- intento de itinerario -->
-    <section class="itinerary">
-<h2 class="titulo-itinerario">Itinerario</h2>
-        <div class="itinerary">
-            <div class="line"></div>
-            <div class="line-progress" id="lineProgress"></div>
+#confirmar p,
+#confirmar .btn {
+  font-family: 'Yrsa', serif; /* o la fuente que quieras para párrafos y botones */
+}
 
-            <!-- EVENTO 1 -->
-            <div class="event">
-                <div class="dot"></div>
-                <div class="event-content">
-                    <h3>5 pm</h3>
-                    <p>Ceremonia</p>
-                </div>
-                <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/iglesia.png?raw=true">
-            </div>
+.memories
+ {
+  font-family:'Hi Melody'; font-size:10px; width:min(800px, 84vw); margin:auto;  
+ }
+ 
+.h{
+  font-weight:600;
+  font-size: clamp(38px, 4.3vw, 50px);
+  text-align:center; margin:0 0 16px;
+  
+}
+.sub{
+  text-align:center; color:var(--muted);
+  font-family:'Italianno'; font-size: clamp(28px, 5.3vw, 38px);
+  margin:0 auto 36px; max-width:720px;
+}
 
-            <!-- EVENTO 2 -->
-            <div class="event">
-                <div class="dot"></div>
-                 <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/copas.png?raw=true">
-                <div class="event-content">
-                    <h3>7 pm</h3>
-                    <p>Recepcion</p>
-                </div>
-               
-            </div>
-
-            <!-- EVENTO 3 -->
-            <div class="event">
-                <div class="dot"></div>
-                <div class="event-content">
-                    <h3>8 pm</h3>
-                    <p>Ramo</p>
-                </div>
-                <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/ramo.png?raw=true">
-            </div>
-
-            <!-- EVENTO 4 -->
-            <div class="event">
-                <div class="dot"></div>
-                <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/plato.png?raw=true">
-                <div class="event-content">
-                    <h3>9 pm</h3>
-                    <p>Cena</p>
-                </div>
-                
-            </div>
-
-            <!-- EVENTO 5 -->
-            <div class="event end">
-                <div class="dot"></div>
-                <div class="event-content">
-                    <h3>10 pm</h3>
-                    <p>Baile</p>
-                </div>
-                <img class="icon" src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/vestido.png?raw=true">
-            </div>
-
-    </section>
-    <!-- aqui acaba de itinerario -->
-
-    <!-- Regalos -->
-    <section class="section" id="regalo">
-        <div class="ornament-top2"></div>
-        <div class="container reveal">
-            
-
-            <div class="details">
-                <article class="card2 reveal">
-                    <h2 class="h">Sugerencia de regalo</h2>
-                    <p>Lluvia de Sobres</p>
-                    <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" alt="Iglesia" class="card-img">
-                    <p><strong>BBVA</strong> — Cuenta de banco</p>
-                    <p>1234567890</p>
-                    <p2>NO NIÑOS</p2>
-                </article>
-                <div class="ornament-top3"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERÍA -->
-    <!-- foto 3 -->
-    <section class="section alt" id="galeria">
-        <div class="memories reveal">
-            <div class="g i3 reveal"></div>
-        </div>
-    </section>
-
-    <!-- accion de confirmacion -->
-
-    <section class="container" id="confirmar" style="background:linear(#F2EFED, #F2EFED)">
-        <div class="container reveal" style="text-align:center">
-            <h2>¿Nos acompañas?</h2>
-            <p class="sub reveal">Confirma tu asistencia antes del<br>
-                <strong>1 de octubre de 2025</strong>.
-            </p>
+/*ade aqui hasta donde dice cuenta regresiva estoy intentando poner la galeria de fotos si no funciona quitar esta parte */
 
 
+/* Cuenta regresiva */
+.countdown{
+  display:grid; grid-template-columns:repeat(4, minmax(60px, 0.8fr));
+  gap:6px; width:min(350px, 80%); margin:8px auto 0;
+}
+.tile{
+  background:#fff; border: none 10px whitesmoke;
+  border-radius:100px; padding:1px 1px;
+  text-align:center; box-shadow:10px 10px 10px rgba(0,1,0,0.4);
+  transform:translateY(12px); opacity:0;
+}
+.tile .num{ font-family: 'Castoro Titling'; font-size: clamp(28px, 4.5vw, 18px); font-weight:300; }
+.tile .lbl{ font-family: 'Castoro Titling'; color:var(--muted); font-size:8px; letter-spacing:.08em; }
 
-            <p>
-                <a class="btn whatsapp" href="https://wa.me/526647629596?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
-            </p>
-        </div>
-    </section>
+/* Detalles */
+.details{
+  display:grid; grid-template-columns:repeat(3,minmax(60px, 0.8fr));
+  gap:5px; width:min(800px, 95%); margin:8px auto 0;
+   
+}
+.card{
+  font-size:20px;
+  text-align: center;
+  width: min(300px, 85vw);
+  background:#fff; border: hidden 15px floralwhite; border-radius:0px;
+  padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
+   
+}
+.card2{
+  font-size:20px;
+  width: min(1300px, 85vw);
+  background:#fff; border: hidden 15px floralwhite; border-radius:0px;
+  padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
+   
+}
+.card-img {
+  width: 100%;          /* ocupa todo el ancho de su contenedor */
+  max-width: 2000px;     /* ancho máximo reducido */
+  height: auto;         /* mantiene proporción */
+  display: block;
+  margin: 0 auto 16px;  /* centrada y con espacio debajo */
+  border-radius: 8px;   /* opcional */
+}
+.details .card p:nth-of-type(1) {
+  font-family: "Ballet", serif;  font-size:13px;/* primera línea */
+}
 
-    <footer>
-        Con amor  ♥  <strong>Taylor & Travis</strong> — 15 · 10 · 26
-    </footer>
+.details .card p:nth-of-type(2) {
+  font-family: "Ballet", serif; font-size:13px;/* segunda línea */
+}
+  .details .card a:nth-of-type(1) {
+  font-family: "Ballet", serif; font-size:13px;/* segunda línea */
+}
+  
+  
+.card h3{font-family:'Ballet'; margin:0 0 8px; font-weight:600; }
+.card p{ margin:6px 0; color:#4d4a45; }
+.btn{
+  display:inline-block; margin-top:12px; padding:10px 18px;
+  border-radius:999px; border:1px solid #cfc9c2; text-decoration:none; color:#2b2b2b; 
+  background:linear-gradient(#fff, #f6f4f1);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover{ transform:translateY(-2px); box-shadow:0 10px 18px rgba(0,0,0,.06); }
+.btn.whatsapp{ font-family: 'Yrsa', cursive; background:#eafff3; border-color:#c1e8d2}
+/* Itinerario */
+.timeline{ border-left:2px solid var(--line); margin:8px auto 0; max-width:680px; padding-left:30px; }
+.step{ font-family: 'Baskerville'; font-size: 15px; position:relative; margin:18px 0; transform:translateY(20px); opacity:0; }
+.step::before{ content:""; position:absolute; left:-20px; top:6px; width:12px; height:12px; background:#fff; border:2px solid #cbbfb2; border-radius:50%; }
 
-    <script>
-        /* --------- Apariciones al hacer scroll --------- */
-        const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g, .btn');
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('in');
-                    io.unobserve(e.target);
-                }
-            });
-        }, {
-            threshold: .18
-        });
-        revealEls.forEach(el => io.observe(el));
+/* Galería */
+.gallery{
+  margin-top: 10px;
+  width: 400px;
+  height: 400px;
+  background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+  
+ 
+}
+.photos{
+  font-weight:800;
+  font-size: clamp(208px, 4.3vw, 50px);
+  text-align:center; margin:500px;
+  font-family: 'Fleur de Leah', cursive;
+  
+  }
+ 
+.g {
+  border-radius:1px; padding-top:100%; position:relative; overflow:hidden;
+  background:#F2EFED; transform:scale(.98); opacity:0;
+}
+.g::before{
+  content:""; position:absolute; inset:0;
+  background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+  transition: transform .6s ease;
+}
+/*este es para que se abra la fotito del cuadrito que esta en el centro img1*/
 
-        /* --------- Cuenta regresiva --------- */
-        const target = new Date('2026-11-15T19:00:00');
-        const d = document.getElementById('d'),
-            h = document.getElementById('h'),
-            m = document.getElementById('m'),
-            s = document.getElementById('s');
+.g:hover::before{ transform:scale(1.16); } /*este numero de scale sirve para el zoom en la foto*/
+.g.i1::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--foto1);
+  background-size: relative;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
+.g.i2::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--foto2);
+  background-size: relative;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
 
-        function tick() {
-            const now = new Date();
-            let diff = Math.max(0, target - now);
-            const dd = Math.floor(diff / 86400000);
-            diff -= dd * 86400000;
-            const hh = Math.floor(diff / 3600000);
-            diff -= hh * 3600000;
-            const mm = Math.floor(diff / 60000);
-            diff -= mm * 60000;
-            const ss = Math.floor(diff / 1000);
-            d.textContent = String(dd).padStart(2, '0');
-            h.textContent = String(hh).padStart(2, '0');
-            m.textContent = String(mm).padStart(2, '0');
-            s.textContent = String(ss).padStart(2, '0');
-        }
-        tick();
-        setInterval(tick, 1000);
+.g.i3::before {
+  content: "";
+  position: absolute;
+  inset: 0;                      /* ocupa todo el contenedor */
+  background-image: var(--foto3);
+  background-size: relative;      /* muestra la imagen entera */
+  background-repeat: no-repeat;  /* sin repetir */
+  background-position: center;   /* centrado */
+}
+.itinerary{
+   width:80px;
+  margin:100px auto;
+  position:relative;   /* ⬅️ CLAVE */
+}
 
-        /* --------- RSVP por WhatsApp + localStorage --------- */
-        const events = document.querySelectorAll('.event');
-        const endEvent = document.querySelector('.event.end');
-        const lineProgress = document.getElementById('lineProgress');
-        const itinerary = document.querySelector('.itinerary');
+/* Línea base */
+/* Línea base (gris) */
+.line{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:4px;
+  height:100%;              /* ⬅️ ya NO es 100% */
+  background:#ddd;
+  transform:translateX(-50%);
+}
+.line.end{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:4px;
+  height:100%;              /* ⬅️ ya NO es 100% */
+  background:#ddd;
+  transform:translateX(-25%);
+}
 
-        // Altura máxima permitida (hasta el punto del evento 5)
-        const maxHeight =
-            endEvent.offsetTop +
-            endEvent.querySelector('.dot').offsetTop +
-            endEvent.querySelector('.dot').offsetHeight / 2;
+/* Línea activa (coloreada) */
+.line-progress{
+  position:absolute;
+  left:50%;
+  top:0;
+  width:4px;
+  height:0;              /* controlada por JS */
+  background:#b07a5b;
+  transform:translateX(-50%);
+  transition:height 0.2s ease-out;
+   grid-column:2;
+  justify-self:center;
+}
 
-        window.addEventListener('scroll', () => {
-            let scrollTop = window.scrollY + window.innerHeight * 0.6;
-            let start = itinerary.offsetTop;
 
-            let newHeight = scrollTop - start;
+.event{
+  display:grid;
+  grid-template-columns: 1fr var(--line-gap) 1fr;
+  align-items:center;
+  margin:120px 0;
+  position:relative;
+}
 
-            // Limitar crecimiento de la línea
-            if (newHeight < 0) newHeight = 0;
-            if (newHeight > maxHeight) newHeight = maxHeight;
+.event.left .event-content{
+  grid-column:1;
+  text-align:right;
+  padding-right:30px;
+}
 
-            lineProgress.style.height = newHeight + 'px';
+.event.right .event-content{
+  grid-column:3;
+  text-align:left;
+  padding-left:30px;
+}
 
-            // Activar / desactivar puntos
-            events.forEach(event => {
-                const eventTop = itinerary.offsetTop + event.offsetTop;
-                if (scrollTop >= eventTop) {
-                    event.classList.add('active');
-                } else {
-                    event.classList.remove('active');
-                }
-            });
-        });
-    </script>
+.event-content{
+  width:45%;
+  
+  font-family:'Yrsa'; font-size: 10px; text-align:center; color:var(--muted);
+  padding:40px 20px 60px;
+  
+}
+
+.event h3{
+  margin:0;
+  color:#b07a5b;
+}
+
+.event p{
+  margin:5px 0 0;
+  color:#555;
+}
+
+/* Punto */
+.dot{
+  position:absolute;
+  left:50%;
+  width:18px;
+  height:18px;
+  background:#ddd;
+  border-radius:50%;
+  transform:translate(-50%, 0);
+  z-index:2;
+  transition:background 0.3s;
+}
+
+.event.active .dot{
+  background:#b07a5b;
+}
+
+/* Icono */
+.icon{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+
+
+/* Footer */
+footer{
+  font-family:'Yrsa'; font-size: 10px; text-align:center; color:var(--muted);
+  padding:40px 20px 60px;
+}
+
+/* ---------- Animaciones base + apariciones al hacer scroll ---------- */
+@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+@keyframes fadeUp{ from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:none} }
+@keyframes slideInLeft{ from{opacity:0; transform:translateX(-40px)} to{opacity:1; transform:none} }
+@keyframes slideInRight{ from{opacity:0; transform:translateX(40px)} to{opacity:1; transform:none} }
+@keyframes revealUp{ from{opacity:0; transform:translateY(40px) scale(.98)} to{opacity:1; transform:none} }
+@keyframes shimmer{ 0%,100%{opacity:0; transform: translateX(-40%) rotate(8deg)} 50%{opacity:.35; transform: translateX(40%) rotate(8deg)} }
+@keyframes bounce{
+  0%,100%{ transform: translate(-50%,0) rotate(45deg); }
+  50%{ transform: translate(-50%,6px) rotate(45deg); }
+}
+/* estado "visible" al scrollear */
+.reveal.in{ animation: fadeUp 800ms ease forwards; }
+.reveal-delay-1.in{ animation-delay: 80ms; }
+.reveal-delay-2.in{ animation-delay: 160ms; }
+.reveal-delay-3.in{ animation-delay: 240ms; }
+.reveal-1.in { animation: slideInLeft 800ms ease forwards; }
+
+
+/* Responsive */
+@media (max-width: 900px){
+  .details{ grid-template-columns:1fr; }
+  .gallery{ grid-template-columns:1fr; 
+}
+@media (max-width: 640px){
+  .strips{ grid-template-columns: 1fr 1.2fr 1fr; gap:10px; }
+  .strip{ height: 58svh; }
+  .countdown{ grid-template-columns:repeat(2,1fr); }
+  .timeline{ padding-left:14px; }
+}
+@media (prefers-reduced-motion: reduce){
+  *{ animation:none !important; transition:none !important }
+}
+
+
+/* Aquí pones la regla */
+img {
+  border-radius: 0 !important;
+}
+#snow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* no bloquea clics */
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.snowflake{
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(110vh);
+  }
+}
+
+</style>
+</head>
+<body>
+<div id="snow"></div>
+<!-- PORTADA: 3 franjas con animaciones independientes -->
+<header class="hero" id="inicio">
+  <div class="monogram">
+  <span class="ital">Baby</span>
+  <span class="gwen">On The</span>
+  <span class="ital">Way</span>
+</div>
+
+
+  <section class="section alt" >
+   
+      <article class="card reveal">
+          <img src="https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido1.png?raw=true" 
+       alt="Iglesia" class="card-img">
+       <h3>Estamos esperando un bebé!</h3>
+</section>
+    
+  </div>
+
+  <div class="hero-text">
+    <div class="hero-names">Bienvenido</div>
+       <div class="ornament-abajo"></div>
+    <div class="hero-date">2026</div>
+ 
+  </div>
+
+  <i class="scroll-indicator" aria-hidden="true"></i>
+</header>
+
+
+<script>
+const snowContainer = document.getElementById("snow");
+
+function createSnowflake(){
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.innerHTML = "⭐";
+
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+  snowflake.style.opacity = Math.random();
+  snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";
+
+  snowContainer.appendChild(snowflake);
+
+  setTimeout(() => {
+    snowflake.remove();
+  }, 10000);
+}
+
+setInterval(createSnowflake, 200);
+</script>
+
+
+
+
+
+<script>
+
+  /* --------- Apariciones al hacer scroll --------- */
+const revealEls = document.querySelectorAll('.photos, .hero-text, .h, .monogram, .reveal, .tile, .card, .step, .g');
+const io = new IntersectionObserver((entries)=> {
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.18});
+revealEls.forEach(el=>io.observe(el));
+
+/* --------- Cuenta regresiva --------- */
+const target = new Date('2026-10-25T19:00:00');
+const d=document.getElementById('d'), h=document.getElementById('h'),
+      m=document.getElementById('m'), s=document.getElementById('s');
+function tick(){
+  const now = new Date();
+  let diff = Math.max(0, target-now);
+  const dd = Math.floor(diff/86400000); diff-=dd*86400000;
+  const hh = Math.floor(diff/3600000);  diff-=hh*3600000;
+  const mm = Math.floor(diff/60000);    diff-=mm*60000;
+  const ss = Math.floor(diff/1000);
+  d.textContent = String(dd).padStart(2,'0');
+  h.textContent = String(hh).padStart(2,'0');
+  m.textContent = String(mm).padStart(2,'0');
+  s.textContent = String(ss).padStart(2,'0');
+}
+tick(); setInterval(tick, 1000);
+
+/* --------- RSVP por WhatsApp + localStorage --------- */
+  const events = document.querySelectorAll('.event');
+const endEvent = document.querySelector('.event.end');
+const lineProgress = document.getElementById('lineProgress');
+const itinerary = document.querySelector('.itinerary');
+
+// Altura máxima permitida (hasta el punto del evento 5)
+const maxHeight =
+  endEvent.offsetTop +
+  endEvent.querySelector('.dot').offsetTop +
+  endEvent.querySelector('.dot').offsetHeight / 2;
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.scrollY + window.innerHeight * 0.6;
+  let start = itinerary.offsetTop;
+
+  let newHeight = scrollTop - start;
+
+  // Limitar crecimiento de la línea
+  if (newHeight < 0) newHeight = 0;
+  if (newHeight > maxHeight) newHeight = maxHeight;
+
+  lineProgress.style.height = newHeight + 'px';
+
+  // Activar / desactivar puntos
+  events.forEach(event => {
+    const eventTop = itinerary.offsetTop + event.offsetTop;
+    if (scrollTop >= eventTop){
+      event.classList.add('active');
+    } else {
+      event.classList.remove('active');
+    }
+  });
+});
+ 
+</script>
+
+
 </body>
-
 </html>
