@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
  <!-- Metadatos Open Graph -->
-<meta property="og:title" content="¡Bebe en camino! 🤰">
-<meta property="og:description" content="¡Bienvenido!">
-<meta property="og:image" content="https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true">
-<meta property="og:url" content="https://EstasInvitado.github.io/BabyOnWay/">
+<meta property="og:title" content="¡Estás invitado a nuestra boda ❤️! Taylor & Travis">
+<meta property="og:description" content="¡Boda Taylor y Travis! Mira todos los detalles aquí.">
+<meta property="og:image" content="https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true">
+<meta property="og:url" content="https://EstasInvitado.github.io/Taylor-Travis/">
 
-<title>Bebe en camino...</title>
+<title>Invitación de Boda — Taylor & Travis</title>
 
 <!-- Carga de la fuente Ballet desde Google Fonts -->
  <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
@@ -35,24 +35,20 @@
 <style>
 :root{
   /* Paleta neutra */
-  --bg: #88398C;
-  --bg-2:url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --bg: #88A98C;
+  --bg-2:#F2EFED;
   --ink:#2b2b2b;
   --muted:#8d877f;
   --line:#d8d4cf;
 
   /* Imágenes: cámbialas por las tuyas */
-  --hero: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
-  --img1: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/fondoestrellas.png?raw=true');
-  --img2: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
-  --ornamento: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true'); 
-  --foto1: url('https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido.png?raw=true');
+  --hero: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/portada.PNG?raw=true');
+  --img1: url('https://raw.githubusercontent.com/nellyaldana/Nelly-y-samuel/refs/heads/main/img13.png');
+  --img2: url('https://github.com/nellyaldana/Nelly-y-samuel/blob/main/flores5.jpg?raw=true');
+  --ornamento: url('https://file.aiquickdraw.com/imgcompressed/img/compressed_9a7ec23d36126cd2ce32b8cd4b12b8da.webp');
+  --foto1: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/foto1.PNG?raw=true');
   --foto2: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja4.png?raw=true');
    --foto3: url('https://github.com/EstasInvitado/Taylor-Travis/blob/main/pareja5.png?raw=true');
-
-  --line-gap: 80px;   /*linea imaginaria util para acomodar el itinerario, espacio total alrededor de la línea */
-
-    
 }
 
 *{box-sizing:border-box}
@@ -73,7 +69,7 @@ body{
   display:grid;
   place-items:center;
   padding:64px 18px 24px;
-background-image: var(--img1);
+ background: linear-gradient(to bottom, #F5ECE6, #F2EFED);
 
 }
 
@@ -103,9 +99,9 @@ background-image: var(--img1);
 /* the */
 .monogram .gwen {
   font-family: 'Gwendolyn', cursive;
-  font-size: 0.5em;      /* un poquito más discreta */
+  font-size: 0.9em;      /* un poquito más discreta */
   margin: 0px;
-   letter-spacing: 2px;
+   letter-spacing: 5px;
 }
 
 
@@ -134,7 +130,7 @@ background-image: var(--img1);
 .strips {
   width: min(980px, 85vw);
   display: grid;
-  
+  grid-template-columns: 0.6fr 0.9fr 0.6fr; /* centro más ancho */
   gap: min(3vw, 16px);
   align-items: center; /* centramos verticalmente dentro de la fila */
 }
@@ -201,18 +197,15 @@ background-image: var(--img1);
   pointer-events:none;
 }
 .hero-names{
-     position: relative;
-  top: -180px;   /* sube */
-  
-  font-family: "Style Script", cursive;
+  font-family: "ballet", cursive;
   font-size: clamp(60px, 8vw, 1px);
   font-weight:80;
   letter-spacing: 4px;
   color:#ffffff;
-  text-shadow: 2px .10px 3px rgba(0.35,0.35,0,.35);
-  transform: translateY(-30px);
+  text-shadow: 0 8px 18px rgba(0,0,0,.35);
+  transform:translateY(18px);
   opacity:0;
-  animation:fadeUp 1300ms ease forwards 1s;
+  animation:fadeUp 1300ms ease forwards 2s;
 }
 .hero-y{
   font-family: "Fleur De Leah", cursive;
@@ -245,7 +238,7 @@ background-image: var(--img1);
 .ornament-top{
   width:100%;
   height:80px; /* altura del adorno */
- background: url("https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true")
+ background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/anillo.png?raw=true")
               no-repeat center;
   background-size:contain;
   margin: 0 auto;
@@ -255,7 +248,7 @@ background-image: var(--img1);
 .ornament-abajo {
   width: 100%;
   height: 80px;
-  background: url("https://github.com/EstasInvitado/BabyOnWay/blob/main/Bebe.png?raw=true")
+  background: url("https://github.com/EstasInvitado/Taylor-Travis/blob/main/decorativogrande.png?raw=true")
               no-repeat center;
   background-size: contain;
   opacity: 0.8;
@@ -264,7 +257,7 @@ background-image: var(--img1);
   bottom: 40px; /* queda encima de la fecha */
   left: 0;
 
-  
+  transform: rotate(180deg);
   pointer-events: none;
 }
 
@@ -283,15 +276,15 @@ background-image: var(--img1);
 }
  .section{
   padding:184px 22px;
-  background-image: var(--img1);
+  background:#F2EFED;
   background-repeat: no-repeat;   /* no se repite */
   background-position: center;    /* centrada */
   background-size: cover;
    
 }
 
-.section.alt{padding:104px 22px; }
-
+.section.alt{padding:104px 22px;  background:var(--bg-2); }
+.section.alt1{background-image: var(--img1); }
 .section.foto1{ background:var(--foto1); }
 
    
@@ -358,7 +351,7 @@ background-image: var(--img1);
 .card{
   font-size:20px;
   text-align: center;
-  width: min(300px, 85vw);
+  width: min(1300px, 85vw);
   background:#fff; border: hidden 15px floralwhite; border-radius:0px;
   padding:24px; box-shadow:0 20px 28px rgba(0,0,0,.05);
    
@@ -372,25 +365,25 @@ background-image: var(--img1);
 }
 .card-img {
   width: 100%;          /* ocupa todo el ancho de su contenedor */
-  max-width: 2000px;     /* ancho máximo reducido */
+  max-width: 80px;     /* ancho máximo reducido */
   height: auto;         /* mantiene proporción */
   display: block;
   margin: 0 auto 16px;  /* centrada y con espacio debajo */
   border-radius: 8px;   /* opcional */
 }
 .details .card p:nth-of-type(1) {
-  font-family: "Ballet", serif;  font-size:13px;/* primera línea */
+  font-family: "Castoro Titling", serif;  font-size:13px;/* primera línea */
 }
 
 .details .card p:nth-of-type(2) {
-  font-family: "Ballet", serif; font-size:13px;/* segunda línea */
+  font-family: "Yrsa", serif; font-size:13px;/* segunda línea */
 }
   .details .card a:nth-of-type(1) {
-  font-family: "Ballet", serif; font-size:13px;/* segunda línea */
+  font-family: "Yrsa", serif; font-size:13px;/* segunda línea */
 }
   
   
-.card h3{font-family:'Ballet'; margin:0 0 8px; font-weight:600; }
+.card h3{font-family:'Italianno'; margin:0 0 8px; font-weight:600; }
 .card p{ margin:6px 0; color:#4d4a45; }
 .btn{
   display:inline-block; margin-top:12px; padding:10px 18px;
@@ -466,109 +459,6 @@ background-position: center;
   background-repeat: no-repeat;  /* sin repetir */
   background-position: center;   /* centrado */
 }
-.itinerary{
-   width:80px;
-  margin:100px auto;
-  position:relative;   /* ⬅️ CLAVE */
-}
-
-/* Línea base */
-/* Línea base (gris) */
-.line{
-  position:absolute;
-  left:50%;
-  top:0;
-  width:4px;
-  height:100%;              /* ⬅️ ya NO es 100% */
-  background:#ddd;
-  transform:translateX(-50%);
-}
-.line.end{
-  position:absolute;
-  left:50%;
-  top:0;
-  width:4px;
-  height:100%;              /* ⬅️ ya NO es 100% */
-  background:#ddd;
-  transform:translateX(-25%);
-}
-
-/* Línea activa (coloreada) */
-.line-progress{
-  position:absolute;
-  left:50%;
-  top:0;
-  width:4px;
-  height:0;              /* controlada por JS */
-  background:#b07a5b;
-  transform:translateX(-50%);
-  transition:height 0.2s ease-out;
-   grid-column:2;
-  justify-self:center;
-}
-
-
-.event{
-  display:grid;
-  grid-template-columns: 1fr var(--line-gap) 1fr;
-  align-items:center;
-  margin:120px 0;
-  position:relative;
-}
-
-.event.left .event-content{
-  grid-column:1;
-  text-align:right;
-  padding-right:30px;
-}
-
-.event.right .event-content{
-  grid-column:3;
-  text-align:left;
-  padding-left:30px;
-}
-
-.event-content{
-  width:45%;
-  
-  font-family:'Yrsa'; font-size: 10px; text-align:center; color:var(--muted);
-  padding:40px 20px 60px;
-  
-}
-
-.event h3{
-  margin:0;
-  color:#b07a5b;
-}
-
-.event p{
-  margin:5px 0 0;
-  color:#555;
-}
-
-/* Punto */
-.dot{
-  position:absolute;
-  left:50%;
-  width:18px;
-  height:18px;
-  background:#ddd;
-  border-radius:50%;
-  transform:translate(-50%, 0);
-  z-index:2;
-  transition:background 0.3s;
-}
-
-.event.active .dot{
-  background:#b07a5b;
-}
-
-/* Icono */
-.icon{
-  width:80px;
-  height:80px;
-  object-fit:contain;
-}
 
 
 
@@ -617,90 +507,155 @@ footer{
 img {
   border-radius: 0 !important;
 }
-#snow{
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-}
-
-.snowflake{
-  position: fixed;       /* ⬅️ CLAVE */
-  top: -20px;
-  left: 0;
-  color: #f2c94c;
-  user-select: none;
-  animation-name: fall;
-  animation-timing-function: linear;
-}
-
-
-@keyframes fall{
-  to{
-    transform: translateY(110vh);
-  }
-}
-
-
 </style>
 </head>
 <body>
-<div id="snow"></div>
+
 <!-- PORTADA: 3 franjas con animaciones independientes -->
 <header class="hero" id="inicio">
   <div class="monogram">
-  <span class="ital">Baby</span>
-  <span class="gwen">On The</span>
-  <span class="ital">Way</span>
+  <span class="ital">save</span>
+  <span class="gwen">The</span>
+  <span class="ital">date</span>
 </div>
 
 
-  <section class="section alt" >
-   
-      <article class="card reveal">
-          <img src="https://github.com/EstasInvitado/BabyOnWay/blob/main/Ultrasonido1.png?raw=true" 
-       alt="Iglesia" class="card-img">
-       <h3>Estamos esperando un bebé!</h3>
-</section>
-    
+  <div class="strips" aria-label="Foto portada en tres franjas">
+    <div class="strip s-left"></div>
+    <div class="strip s-center"></div>
+    <div class="strip s-right"></div>
   </div>
 
   <div class="hero-text">
-    <div class="hero-names">Bienvenido</div>
+    <div class="hero-names">Taylor y Travis</div>
        <div class="ornament-abajo"></div>
-    <div class="hero-date">2026</div>
+    <div class="hero-date">25 · 10 · 25</div>
  
   </div>
 
   <i class="scroll-indicator" aria-hidden="true"></i>
 </header>
 
-
-<script>
-const snow = document.getElementById("snow");
-
-function createStar(){
-  const star = document.createElement("div");
-  star.className = "snowflake";
-  star.textContent = "⭐";
-
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.fontSize = Math.random() * 10 + 12 + "px";
-  star.style.opacity = Math.random();
-  star.style.animationDuration = Math.random() * 5 + 6 + "s";
-
-  snow.appendChild(star);
-
-  setTimeout(() => star.remove(), 12000);
-}
-
-setInterval(createStar, 250);
-</script>
+<!-- CUENTA REGRESIVA -->
+<section class="section alt" id="cuenta">
+  <div class="ornament-top"></div>
+    <h2 class="h reveal-1">¡Falta muy poco!</h2>
+   <p class="sub reveal">
+  Acompáñanos a celebrar nuestro amor este<br>
+  <strong>25 de Octubre de 2025</strong>.
+</p>
 
 
+    <div class="countdown">
+      <div class="tile reveal"><div class="num" id="d">00</div><div class="lbl">Días</div></div>
+      <div class="tile reveal reveal-delay-1"><div class="num" id="h">00</div><div class="lbl">Horas</div></div>
+      <div class="tile reveal reveal-delay-2"><div class="num" id="m">00</div><div class="lbl">Minutos</div></div>
+      <div class="tile reveal reveal-delay-3"><div class="num" id="s">00</div><div class="lbl">Segundos</div></div>
+    </div>
+  
+</section>
+
+<section class="section alt" id="galeria">
+  <div class="memories reveal">
+      <div class="g i1 reveal"></div>
+    </div>
+  
+</section>
+
+<!-- ubicaciones -->
+<section class="section alt" id="ubicaciones">
+    <h2 class="h">Lugar</h2>
+    <div class="details">
+         <!-- ubicacion de la iglesia -->
+      <article class="card reveal">
+          <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/iglesia1.png?raw=true" 
+       alt="Iglesia" class="card-img">
+        <h3>Ceremonia</h3>
+        <p><strong>06:00 PM</strong> — Iglesia nuestro señor</p>
+        <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
+      </article>
+      <!-- ubicacion del salon -->
+      <article class="card reveal">
+          <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/disco.png?raw=true" 
+       alt="Iglesia" class="card-img">
+        <h3>Recepción</h3>
+        <p><strong>07:00 PM</strong> — Salon las palmas</p>
+        <p>Amanecer, Terrazas de San Bernardo, La Cueva, 22525 Tijuana, B.C., México</p>
+        <a class="btn" target="_blank" href="https://maps.app.goo.gl/FxHejANH9JJGKAsA7">Ver mapa</a>
+      </article>
+    </div>
+    </section>
+    
+  <!-- foto 3 -->  
+    <section class="section alt" id="galeria">
+  <div class="memories reveal">
+      <div class="g i2 reveal"></div>
+    </div>
+  
+</section>
 
 
+    
 
+  
+ <section class="section alt" id="cuenta">   
+<article class="card2 reveal reveal-delay-2">
+    <div class="timeline">
+    <h2 class="h">Itinerario</h2>
+      <div class="step reveal"><strong>06:00 pm</strong> — Recepción de invitados</div>
+      <div class="step reveal reveal-delay-1"><strong>07:00 pm</strong> — Ceremonia Civil</div>
+      <div class="step reveal reveal-delay-2"><strong>08:00 pm</strong> — Cena</div>
+      <div class="step reveal reveal-delay-3"><strong>08:30 pm</strong> — Baile</div>
+    </div>
+    </article>
+  
+</section>
+
+<!-- Regalos -->
+<section class="section" id="detalles">
+  <div class="container reveal">
+    <h2 class="h">Sugerencia de regalo</h2>
+   <img src="https://github.com/EstasInvitado/Taylor-Travis/blob/main/sobre.png?raw=true" 
+       alt="Iglesia" class="card-img">
+    <div class="details">
+      <article class="card reveal">
+        <h3>Sobre</h3>
+        <p><strong>BBVA</strong> — Cuenta de banco</p>
+        <p>1234567890</p>
+      </article>
+</div>
+    </div>
+ </section>
+
+<!-- GALERÍA -->
+ <!-- foto 3 -->  
+    <section class="section alt" id="galeria">
+  <div class="memories reveal">
+      <div class="g i3 reveal"></div>
+    </div>
+</section>
+
+<!-- accion de confirmacion --> 
+  
+ <section class="container"  id="confirmar" style="background:linear(#F2EFED, #F2EFED)">
+    <div class="container reveal" style="text-align:center">
+      <h2>¿Nos acompañas?</h2>
+      <p class="sub reveal">Confirma tu asistencia antes del<br>
+      <strong>1 de octubre de 2025</strong>.</p>
+      
+     
+      
+      <p>
+        <a class="btn whatsapp" href="https://wa.me/526647629593?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Nelly%20y%20Samuel" target="_blank" rel="noreferrer noopener">Confirmar por WhatsApp</a>
+      </p>
+     <div class="ornament-down"></div>
+    </div>
+  </section>
+  
+<footer>
+  Con amor ♡ <strong>Samuel & Nelly</strong> — 25 · 10 · 25
+</footer>
 
 <script>
 
@@ -732,42 +687,8 @@ function tick(){
 tick(); setInterval(tick, 1000);
 
 /* --------- RSVP por WhatsApp + localStorage --------- */
-  const events = document.querySelectorAll('.event');
-const endEvent = document.querySelector('.event.end');
-const lineProgress = document.getElementById('lineProgress');
-const itinerary = document.querySelector('.itinerary');
-
-// Altura máxima permitida (hasta el punto del evento 5)
-const maxHeight =
-  endEvent.offsetTop +
-  endEvent.querySelector('.dot').offsetTop +
-  endEvent.querySelector('.dot').offsetHeight / 2;
-
-window.addEventListener('scroll', () => {
-  let scrollTop = window.scrollY + window.innerHeight * 0.6;
-  let start = itinerary.offsetTop;
-
-  let newHeight = scrollTop - start;
-
-  // Limitar crecimiento de la línea
-  if (newHeight < 0) newHeight = 0;
-  if (newHeight > maxHeight) newHeight = maxHeight;
-
-  lineProgress.style.height = newHeight + 'px';
-
-  // Activar / desactivar puntos
-  events.forEach(event => {
-    const eventTop = itinerary.offsetTop + event.offsetTop;
-    if (scrollTop >= eventTop){
-      event.classList.add('active');
-    } else {
-      event.classList.remove('active');
-    }
-  });
-});
+  
  
 </script>
-
-
 </body>
 </html>
